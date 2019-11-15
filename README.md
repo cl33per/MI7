@@ -1,13 +1,9 @@
 #MI7
 
 ![GitHub followers](https://img.shields.io/github/followers/cl33per?style=social)
-
 [![GitHub issues](https://img.shields.io/github/issues/cl33per/MI7)](https://github.com/cl33per/MI7/issues)
-
 ![GitHub](https://img.shields.io/github/license/cl33per/MI7)
-
 ![GitHub top language](https://img.shields.io/github/languages/top/cl33per/MI7)
-
 ![GitHub last commit](https://img.shields.io/github/last-commit/cl33per/MI7)
 
 ### Summary
