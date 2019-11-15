@@ -12,7 +12,7 @@ MI7 is built to....
 
 See the working app here:
 
-### Collabertors
+### Additional Creators
 - [Aaron McKoy](https://github.com/ArMc8234)
 - [Travis Stewart](https://github.com/travisstew)
 - [Kshitij Vadake](https://github.com/KTJ-46)
