@@ -1,22 +1,30 @@
 {
-  "name": "mi7",
+  "name": "MI7",
   "version": "1.0.0",
-  "description": "![GitHub followers](https://img.shields.io/github/followers/cl33per?style=social) [![GitHub issues](https://img.shields.io/github/issues/cl33per/MI7)](https://github.com/cl33per/MI7/issues) ![GitHub](https://img.shields.io/github/license/cl33per/MI7) ![GitHub top language](https://img.shields.io/github/languages/top/cl33per/MI7) ![GitHub last commit](https://img.shields.io/github/last-commit/cl33per/MI7)",
-  "main": "index.js",
+  "description": "MI7",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "lint": "eslint --quiet .",
+    "fix": "eslint --fix .",
+    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cl33per/MI7.git"
-  },
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cl33per/MI7/issues"
-  },
-  "homepage": "https://github.com/cl33per/MI7#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "express-handlebars": "^3.1.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.6"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.1.4",
+    "prettier": "^1.17.1"
   }
 }
