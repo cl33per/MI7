@@ -18,7 +18,7 @@ See the working app here:
 - [Aaron McKoy](https://github.com/ArMc8234)
 - [Travis Stewart](https://github.com/travisstew)
 - [Kshitij Vadake](https://github.com/KTJ-46)
-
+- [Jordan McGraner](https://github.com/jlmcgraner)
 ### Important for local development
   
 Before running locally. Configure local database with a sql workbench application. Use the schema.sql that is provided to build the database and tabels. Import json file with dummy data. Run `npm install` to download and install all packages locally. Change config file with local credentials. Run `node server.js` Enjoy! Happy Coding!
