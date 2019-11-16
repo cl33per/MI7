@@ -44,4 +44,6 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
+
+// Exporting models
 module.exports = app;
