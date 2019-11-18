@@ -12,7 +12,18 @@
     <div class="row" style="margin-top: 30px">
         <div class="col-6">
           <div class="card" id="departmenttList">
-            <table class="table">
+            <div class="card-header">
+               Departments
+            </div>
+            <ul id="example-list" class="list-group">
+              {{#each examples}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="example/{{this.id}}">{{this.text}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}}
+            </ul>
+            {{!-- <table class="table">
               <thead class="thead-dark">
               <tr>
                 <th scope="col">ID</th>
@@ -41,12 +52,23 @@
                   <td>comm@company.org</td>
                 </tr>
               </tbody>
-            </table>
+            </table> --}}
           </div>
         </div>
         <div class="col-6">
           <div class="card" id="employeeList">
-            <table class="table">
+            <div class="card-header">
+              Employees
+            </div>
+              <ul id="example-list" class="list-group">
+              {{#each examples}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="example/{{this.id}}">{{this.text}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}}
+            </ul>
+            {{!-- <table class="table">
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">ID</th>
@@ -75,7 +97,7 @@
                   <td>Red Auerbach</td>
                 </tr>
               </tbody>
-            </table>
+            </table> --}}
           </div>
         </div>
     </div>
@@ -88,23 +110,21 @@
     <div class="row">
 
         <div class="col-6 text-center" id="dataTabA">
-           <a target="_blank" href="app/images/Graph_1.png">
-            <img src="app/images/Graph_1.png" alt="Graph_1" width="300" height="250">
-            </a>
-          <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+          <div class="card">
+            <div class="card header">D3 Chart 1</div>
+              <a target="_blank" href="app/images/Graph_1.png">
+                <img src="app/images/Graph_1.png" alt="Graph_1" width="300" height="250">
+                </a>
+          </div>
        </div>
 
       <div class="col-6 text-center" id="dataTabB">
-        <a target="_blank" href="app/images/Graph_2.png">
-        <img src="app/images/Graph_2.png" alt="Graph_2" width="300" height="250">
-        </a>
+        <div class="card">
+          <div class="card header">D3 Chart 2</div>
+          <a target="_blank" href="app/images/Graph_2.png">
+          <img src="app/images/Graph_2.png" alt="Graph_2" width="300" height="250">
+          </a>
+        </div>
       </div>
     </div>
 
