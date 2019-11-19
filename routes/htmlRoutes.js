@@ -3,13 +3,28 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Department.findAll({}).then(function(dbDepartment) {
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+        msg: "The Mentor",
+        examples: dbDepartment
       });
     });
   });
+
+   // Render login page for entry
+   app.get("/login", function(req, res) {
+    res.render("login");
+  });
+
+     // Render dashboard page 
+     app.get("/dashboard", function(req, res) {
+      res.render("dashboard");
+    });
+
+     // Render new employee  page 
+     app.get("/new_employee", function(req, res) {
+     res.render("newProfile");
+     });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
@@ -24,4 +39,6 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
+
+ 
 };

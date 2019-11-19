@@ -4,11 +4,11 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     Department.associate = function (modules) {
-        Department.hasMany(modules.Department, {
+        Department.hasMany(modules.Employee, {
             foreignkey: {
                 allowNull: false
             }
         });
     };
-    return Employee;
+    return Department;
 };
