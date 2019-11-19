@@ -1,10 +1,137 @@
 <div id="home">
   <div class="container">
+    <!--Row Number 1-->
+    <div class="row" style="background-color: cyan; margin-top: 30px">
+      <div class="col-8 offset-2">
+        <h1 class="text-center">{{msg}}</h1>
+        <h2 class="text-center">Performance Improvement Module</h2>
+      </div>
+    </div>
+ 
+    <!--Row Number 2-->
+    <div class="row" style="margin-top: 30px">
+        <div class="col-6">
+          <div class="card" id="departmenttList">
+            <div class="card-header">
+               Departments
+            </div>
+            <ul id="example-list" class="list-group">
+              {{#each examples}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="example/{{this.id}}">{{this.text}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}}
+            </ul>
+            {{!-- <table class="table">
+              <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Department</th>
+                <th scope="col">Director</th>
+                <th scope="col">Dept Email</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Info Systems</td>
+                  <td>Otto Cook</td>
+                  <td>it@company.org</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Human Resources</td>
+                  <td>Tim Thornton</td>
+                  <td>hr@company.org</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Communications</td>
+                  <td>Yolanda Cameron</td>
+                  <td>comm@company.org</td>
+                </tr>
+              </tbody>
+            </table> --}}
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card" id="employeeList">
+            <div class="card-header">
+              Employees
+            </div>
+              <ul id="example-list" class="list-group">
+              {{#each examples}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="example/{{this.id}}">{{this.text}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}}
+            </ul>
+            {{!-- <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Mentor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Lew</td>
+                  <td>Alcindor</td>
+                  <td>John Wooten</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Tom</td>
+                  <td>Brady</td>
+                  <td>Robert Kraft</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>Bird</td>
+                  <td>Red Auerbach</td>
+                </tr>
+              </tbody>
+            </table> --}}
+          </div>
+        </div>
+    </div>
+
+    <!--Row Number 3-->
+    <div class="row" style="margin-top: 30px">
+       <h3>Organizational Metrics:</h3>
+    </div>
+    <!--Row Number 4-->
+    <div class="row">
+
+        <div class="col-6 text-center" id="dataTabA">
+          <div class="card">
+            <div class="card header">D3 Chart 1</div>
+              <a target="_blank" href="app/images/Graph_1.png">
+                <img src="app/images/Graph_1.png" alt="Graph_1" width="300" height="250">
+                </a>
+          </div>
+       </div>
+
+      <div class="col-6 text-center" id="dataTabB">
+        <div class="card">
+          <div class="card header">D3 Chart 2</div>
+          <a target="_blank" href="app/images/Graph_2.png">
+          <img src="app/images/Graph_2.png" alt="Graph_2" width="300" height="250">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--Row Number 4-->
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
+        {{!-- <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Example Text</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
@@ -14,16 +141,7 @@
             <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </form> --}}
       </div>
     </div>
   </div>

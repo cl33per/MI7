@@ -9,35 +9,41 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.TEXT,
             validation: {
                 isUrl: true
-            }
+            },
+            email: DataTypes.STRING,
+            Password: DataTypes.STRING,
+            manager: DataTypes.BOOLEAN,
+            active: DataTypes.BOOLEAN
+
         }
     });
-    Employee.associate = function (models) {
-        Employee.belongsTo(models.Department, {
-                foreignkey: {
-                    allowNull: false
-                }
-            }),
-            Employee.belongsTo(models.Certificaton, {
-                foreignkey: {
-                    allowNull: false
-                }
-            }),
-            Employee.belongsTo(models.Address, {
-                foreignkey: {
-                    allowNull: false
-                }
-            }),
-            Employee.belongsTo(models.Salary, {
-                foreignkey: {
-                    allowNull: false
-                }
-            }),
-            Employee.belongsTo(models.Project, {
-                foreignkey: {
-                    allowNull: false
-                }
-            });
-    };
-    return Employee;
+    
+Employee.associate = function (models) {
+    Employee.belongsTo(models.Department, {
+        foreignkey: {
+            allowNull: false
+        }
+    }),
+        Employee.belongsTo(models.Certificaton, {
+            foreignkey: {
+                allowNull: false
+            }
+        }),
+        Employee.belongsTo(models.Address, {
+            foreignkey: {
+                allowNull: false
+            }
+        }),
+        Employee.belongsTo(models.Salary, {
+            foreignkey: {
+                allowNull: false
+            }
+        }),
+        Employee.belongsTo(models.Project, {
+            foreignkey: {
+                allowNull: false
+            }
+        });
+};
+return Employee;
 };
