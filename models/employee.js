@@ -5,7 +5,11 @@ module.exports = function (sequelize, DataTypes) {
         birth_date: DataTypes.DATE,
         hire_date: DataTypes.DATE,
         gender: DataTypes.ENUM('M', 'F'),
-        headeshot: {
+        survey: {
+            Type: DataTypes.BOOLEAN,
+            Default: false
+        },
+        headshot: {
             type: DataTypes.TEXT,
             validation: {
                 isUrl: true
@@ -25,7 +29,10 @@ module.exports = function (sequelize, DataTypes) {
             Password: DataTypes.STRING,
             active: DataTypes.BOOLEAN
 
-        }
+        },
+        mentor:  DataTypes.STRING
+
+        
     });
 
     Employee.associate = function (models) {
