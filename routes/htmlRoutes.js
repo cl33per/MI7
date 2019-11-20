@@ -16,11 +16,6 @@ module.exports = function(app) {
     res.render("login");
   });
 
-     // Render dashboard page 
-     app.get("/dashboard", function(req, res) {
-      res.render("dashboard");
-    });
-
      // Render new employee  page 
      app.get("/new_employee", function(req, res) {
      res.render("newProfile");

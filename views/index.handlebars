@@ -23,36 +23,6 @@
               </li>
               {{/each}}
             </ul>
-            {{!-- <table class="table">
-              <thead class="thead-dark">
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Department</th>
-                <th scope="col">Director</th>
-                <th scope="col">Dept Email</th>
-              </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Info Systems</td>
-                  <td>Otto Cook</td>
-                  <td>it@company.org</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Human Resources</td>
-                  <td>Tim Thornton</td>
-                  <td>hr@company.org</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Communications</td>
-                  <td>Yolanda Cameron</td>
-                  <td>comm@company.org</td>
-                </tr>
-              </tbody>
-            </table> --}}
           </div>
         </div>
         <div class="col-6">
@@ -68,36 +38,6 @@
               </li>
               {{/each}}
             </ul>
-            {{!-- <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Mentor</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Lew</td>
-                  <td>Alcindor</td>
-                  <td>John Wooten</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Tom</td>
-                  <td>Brady</td>
-                  <td>Robert Kraft</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>Bird</td>
-                  <td>Red Auerbach</td>
-                </tr>
-              </tbody>
-            </table> --}}
           </div>
         </div>
     </div>
@@ -106,7 +46,7 @@
     <div class="row" style="margin-top: 30px">
        <h3>Organizational Metrics:</h3>
     </div>
-    <!--Row Number 4-->
+    {{!-- <!--Row Number 4 Empty Divs with Old Charts-->
     <div class="row">
 
         <div class="col-6 text-center" id="dataTabA">
@@ -126,9 +66,9 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> --}}
 
-    <!--Row Number 4-->
+    <!--Row Number 5  New Divs from SB Bootstrap Template-->
     <div class="row">
       <div class="col-8 offset-2">
         {{!-- <form class="clearfix mb-4" action="POST">
@@ -143,6 +83,73 @@
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form> --}}
       </div>
+                  <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2">
+                    <canvas id="myPieChart"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-primary"></i> Direct
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-success"></i> Social
+                    </span>
+                    <span class="mr-2">
+                      <i class="fas fa-circle text-info"></i> Referral
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   </div>
 </div>
