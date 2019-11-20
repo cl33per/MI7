@@ -5,6 +5,8 @@ module.exports = function (sequelize, DataTypes) {
         birth_date: DataTypes.DATE,
         hire_date: DataTypes.DATE,
         gender: DataTypes.ENUM('M', 'F'),
+        job_title: DataTypes.STRING,
+        salary: DataTypes.INTEGER,
 
         headshot: {
             type: DataTypes.TEXT,
