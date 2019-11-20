@@ -5,10 +5,7 @@ module.exports = function (sequelize, DataTypes) {
         birth_date: DataTypes.DATE,
         hire_date: DataTypes.DATE,
         gender: DataTypes.ENUM('M', 'F'),
-        survey: {
-            Type: DataTypes.BOOLEAN,
-            Default: false
-        },
+
         headshot: {
             type: DataTypes.TEXT,
             validation: {
