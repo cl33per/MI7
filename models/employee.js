@@ -14,9 +14,19 @@ module.exports = function (sequelize, DataTypes) {
             validation: {
                 isUrl: true
             },
-            email: DataTypes.STRING,
+        },
+        email: {
+             type: DataTypes.STRING,
+             unique: {
+                 name: 'users_email',
+                 msg: 'A user with this email already exists.',
+                },
+            allowNull: false,
+            validate: {
+                notEmpty: true,
+                isEmail: true,
+                },
             Password: DataTypes.STRING,
-            manager: DataTypes.BOOLEAN,
             active: DataTypes.BOOLEAN
 
         },
@@ -24,33 +34,18 @@ module.exports = function (sequelize, DataTypes) {
 
         
     });
-    
-Employee.associate = function (models) {
-    Employee.belongsTo(models.Department, {
-        foreignkey: {
-            allowNull: false
-        }
-    }),
-        Employee.belongsTo(models.Certificaton, {
-            foreignkey: {
-                allowNull: false
-            }
-        }),
-        Employee.belongsTo(models.Address, {
-            foreignkey: {
-                allowNull: false
-            }
-        }),
-        Employee.belongsTo(models.Salary, {
-            foreignkey: {
-                allowNull: false
-            }
-        }),
-        Employee.belongsTo(models.Project, {
-            foreignkey: {
-                allowNull: false
-            }
-        });
-};
-return Employee;
+
+    Employee.associate = function (models) {
+        Employee.belongsTo(models.Department, {
+                foreignkey: {
+                    allowNull: false
+                }
+            }),
+            Employee.belongsTo(models.Title, {
+                foreignkey: {
+                    allowNull: false
+                }
+            });
+    };
+    return Employee;
 };
