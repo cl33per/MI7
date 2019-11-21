@@ -18,7 +18,7 @@
             <ul id="example-list" class="list-group">
               {{#each examples}}
               <li data-id="{{this.id}}" class="list-group-item">
-                <a href="example/{{this.id}}">{{this.text}}</a>
+                <a href="example/{{this.id}}">{{this.dep_name}}</a>
                 <button class="btn btn-danger float-right delete">ｘ</button>
               </li>
               {{/each}}
@@ -31,9 +31,9 @@
               Employees
             </div>
               <ul id="example-list" class="list-group">
-              {{#each examples}}
+              {{#each employeeData}}
               <li data-id="{{this.id}}" class="list-group-item">
-                <a href="example/{{this.id}}">{{this.text}}</a>
+                <a href="example/{{this.id}}">{{this.first_name}}</a>
                 <button class="btn btn-danger float-right delete">ｘ</button>
               </li>
               {{/each}}
