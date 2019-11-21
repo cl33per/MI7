@@ -1,7 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var ProjectToemployee = sequelize.define("ProjectToemployee", {
-        date: DataTypes.DATE
-    });
+    var ProjectToemployee = sequelize.define("ProjectToemployee", {});
     ProjectToemployee.associate = function (models) {
         ProjectToemployee.belongsTo(models.Project, {
             foreignkey: {
