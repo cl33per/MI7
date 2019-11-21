@@ -2,10 +2,11 @@ module.exports = function (sequelize, DataTypes) {
     var Employee = sequelize.define("Employee", {
         first_name: DataTypes.STRING,
         last_name: DataTypes.STRING,
+        gender: DataTypes.ENUM('M', 'F'),
+        salary:DataTypes.DECIMAL(13,4),
         birth_date: DataTypes.DATE,
         hire_date: DataTypes.DATE,
-        gender: DataTypes.ENUM('M', 'F'),
-        headeshot: {
+        headshot: {
             type: DataTypes.TEXT,
             validation: {
                 isUrl: true
@@ -22,10 +23,8 @@ module.exports = function (sequelize, DataTypes) {
                 notEmpty: true,
                 isEmail: true,
                 },
-            Password: DataTypes.STRING,
+        },
             active: DataTypes.BOOLEAN
-
-        }
     });
 
     Employee.associate = function (models) {
@@ -38,7 +37,12 @@ module.exports = function (sequelize, DataTypes) {
                 foreignkey: {
                     allowNull: false
                 }
-            });
+            }),
+            Employee.belongsTo(models.Position, {
+                foreignkey: {
+                    allowNull: false
+                }
+            });;
     };
     return Employee;
 };
