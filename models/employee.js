@@ -3,9 +3,10 @@ module.exports = function (sequelize, DataTypes) {
         first_name: DataTypes.STRING,
         last_name: DataTypes.STRING,
         gender: DataTypes.ENUM('M', 'F'),
-        salary:DataTypes.DECIMAL(13,4),
+        salary:DataTypes.DECIMAL(13,2),
         birth_date: DataTypes.DATE,
         hire_date: DataTypes.DATE,
+        education:DataTypes.STRING,
         headshot: {
             type: DataTypes.TEXT,
             validation: {
@@ -24,7 +25,8 @@ module.exports = function (sequelize, DataTypes) {
                 isEmail: true,
                 },
         },
-            active: DataTypes.BOOLEAN
+            active: DataTypes.BOOLEAN,
+            survey_score: DataTypes.INTEGER
     });
 
     Employee.associate = function (models) {
