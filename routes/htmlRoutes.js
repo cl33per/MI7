@@ -16,12 +16,12 @@ module.exports = function(app) {
 
    // Render login page for entry
    app.get("/login", function(req, res) {
-    res.render("login");
-  });
+      res.render("login");
+   });
 
      // Render new employee  page 
      app.get("/new_employee", function(req, res) {
-     res.render("newProfile");
+        res.render("newProfile");
      });
 
   // Load example page and pass in an example by id

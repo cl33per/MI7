@@ -13,6 +13,17 @@ module.exports = function(app) {
       res.json(dbEmployee);
     });
   });
+  
+  app.get('/api/employee',function(req,res ){
+      db.Employee.findAll({}).then(function(e) {
+        res.json(e);
+      });
+  });
+  app.get('/api/position',function(req,res ){
+      db.Position.findAll({}).then(function(e) {
+        res.json(e);
+      });
+  });
 
   // Create a new example
   app.post("/api/departments", function(req, res) {
