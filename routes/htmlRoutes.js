@@ -4,9 +4,13 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.Department.findAll({}).then(function(dbDepartment) {
-          res.render("index", {
-            examples: dbDepartment
-          });
+      db.Employee.findAll({}).then(function(dbEmployee) {
+        res.render("index", {
+          msg: "The Mentor",
+          departments: dbDepartment,
+          employees: dbEmployee
+        });
+      })
     });
   });
 
@@ -21,10 +25,10 @@ module.exports = function(app) {
      });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  app.get("/department/:id", function(req, res) {
+    db.Department.findOne({ where: { id: req.params.id } }).then(function(dbDepartment) {
       res.render("example", {
-        example: dbExample
+        example: dbDepartment
       });
     });
   });
