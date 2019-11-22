@@ -19,9 +19,19 @@ module.exports = function(app) {
         res.json(e);
       });
   });
-  // app.get('/api/title', function(req,res){
-  //   db.Title
-  // });
+  //titles
+  app.get('/api/title', function(req,res){
+    db.Title.findAll({}).then(function (e) { 
+        res.json(e);
+     });
+  });
+  
+  app.get('/api/project', function(req,res){
+    db.Project.findAll({}).then(function (e) { 
+        res.json(e);
+     });
+  });
+
   app.get('/api/position',function(req,res ){
       db.Position.findAll({}).then(function(e) {
         res.json(e);

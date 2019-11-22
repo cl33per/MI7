@@ -17,6 +17,26 @@ $(document).ready(function(){
           $('#position').append(option);
       });
   });
+//====title option tags added ===//
+  $.get('/api/title',function(data){
+        data.forEach((e) => {
+          var option =  $('<option>');
+          option.attr('value',e.title_name);
+          option.html(e.title_name);
+          $('#title').append(option);
+      });
+  });
+//=====project option tags added ===//
+  $.get('/api/project',function(data){
+        data.forEach((e) => {
+          var option =  $('<option>');
+          option.attr('value',e.project_name);
+          option.html(e.project_name);
+          $('#project').append(option);
+      });
+  });
+
+
 
   
 
