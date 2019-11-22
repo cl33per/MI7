@@ -1,6 +1,6 @@
 $(document).ready(function(){
 //====department option tags added====//
-  $.get('/api/examples',function(data){
+  $.get('/api/departments',function(data){
         data.forEach((e) => {
           var option =  $('<option>');
           option.attr('value',e.dep_name);
