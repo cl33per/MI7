@@ -17,10 +17,10 @@
             <div class="card-header">
                Departments
             </div>
-            <ul id="example-list" class="list-group">
-              {{#each examples}}
+            <ul id="department-list" class="list-group">
+              {{#each departments}}
               <li data-id="{{this.id}}" class="list-group-item">
-                <a href="example/{{this.id}}">{{this.text}}</a>
+                <a href="department/{{this.id}}">{{this.dep_name}}</a>
                 <button class="btn btn-danger float-right delete">ｘ</button>
               </li>
               {{/each}}
@@ -32,10 +32,10 @@
             <div class="card-header">
               Employees
             </div>
-              <ul id="example-list" class="list-group">
-              {{#each examples}}
+              <ul id="-list" class="list-group">
+              {{#each employees}}
               <li data-id="{{this.id}}" class="list-group-item">
-                <a href="example/{{this.id}}">{{this.text}}</a>
+                <a href="employee/{{this.id}}">{{this.first_name}}, {{this.last_name}}</a>
                 <button class="btn btn-danger float-right delete">ｘ</button>
               </li>
               {{/each}}
@@ -48,27 +48,6 @@
     <div class="row" style="margin-top: 30px">
        <h3>Organizational Metrics:</h3>
     </div>
-    {{!-- <!--Row Number 4 Empty Divs with Old Charts-->
-    <div class="row">
-
-        <div class="col-6 text-center" id="dataTabA">
-          <div class="card">
-            <div class="card header">D3 Chart 1</div>
-              <a target="_blank" href="app/images/Graph_1.png">
-                <img src="app/images/Graph_1.png" alt="Graph_1" width="300" height="250">
-                </a>
-          </div>
-       </div>
-
-      <div class="col-6 text-center" id="dataTabB">
-        <div class="card">
-          <div class="card header">D3 Chart 2</div>
-          <a target="_blank" href="app/images/Graph_2.png">
-          <img src="app/images/Graph_2.png" alt="Graph_2" width="300" height="250">
-          </a>
-        </div>
-      </div>
-    </div> --}}
 
     <!--Row Number 5  New Divs from SB Bootstrap Template-->
     <div class="row">
@@ -159,3 +138,5 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/sampleData.js"></script>
+<script src="/js/departmentForm.js"></script>
+<script src="/js/employeeForm.js"></script>
