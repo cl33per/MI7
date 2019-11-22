@@ -35,5 +35,11 @@ module.exports = function(app) {
     res.render("404");
   });
 
+  // sample page for displaying Data
+  app.get("/sample_data", function(req, res){
+  res.render("sampleData");
+
+
+  });
  
 };
