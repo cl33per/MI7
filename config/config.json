@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "ADU6pyNJ",
+    "password": "",
     "database": "thementor_db",
     "host": "localhost",
     "dialect": "mysql"
