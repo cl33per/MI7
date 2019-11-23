@@ -37,6 +37,36 @@ $(document).ready(function(){
   });
 
 
+//post form //
+var newEmployee = {
+   firstName: $('#inputFirstName4').val().trim(),
+   lastName: $('#inputLastName4').val().trim(),
+   birthDate: $('#inputBirthDate4').val(),
+   hireDate: $('#inputHireDate4').val(),
+   gender: $('#inputGender4').val().trim().toUpperCase(),
+   email: $('#inputEmail4').val().trim(),
+   education: $('#education').val(),
+   salary: $('#inputSalary').val(),
+   department: $('#departmet').val(),
+   project: $('#project').val(),
+   title: $('#title').val(),
+   position: $('#position').val()
+}
+$('#submit').on('click', function (event){
+    event.preventDefault();
+    
+     
+    $.ajax({
+      method: "POST",
+      url: "/api/employee",
+      data: newEmployee,
+      
+    }).then(function (data) {
+        console.log(data);
+      });
+});
+
+
 
   
 
