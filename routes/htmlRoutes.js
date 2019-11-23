@@ -55,8 +55,12 @@ app.get("/", function(req, res) {
   // Load example page and pass in an example by id
   app.get("/department/:id", function(req, res) {
     db.Department.findOne({ where: { id: req.params.id } }).then(function(dbDepartment) {
-      res.render("example", {
-        example: dbDepartment
+      db.Employee.findAll({ where: { DepartmentID: req.params.id } }).then(function(dbEmployee){
+        res.render("example", {
+          example: dbDepartment,
+          employees: dbEmployee
+        });
+
       });
     });
   });
