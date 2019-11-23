@@ -5,10 +5,10 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Department.findAll({}).then(function(dbDepartment) {
       db.Employee.findAll({}).then(function(dbEmployee) {
-        res.render("index", {
+          res.render("index", {
           msg: "The Mentor",
           departments: dbDepartment,
-          employees: dbEmployee
+          employees: dbEmployee,
         });
       })
     });
@@ -37,12 +37,4 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-
-  // sample page for displaying Data
-  app.get("/sample_data", function(req, res){
-  res.render("sampleData");
-
-
-  });
- 
 };

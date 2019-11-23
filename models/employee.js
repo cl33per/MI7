@@ -25,7 +25,8 @@ module.exports = function (sequelize, DataTypes) {
                 isEmail: true,
                 },
         },
-            active: DataTypes.BOOLEAN
+            active: DataTypes.BOOLEAN,
+            survey_score:DataTypes.INTEGER
     });
 
     Employee.associate = function (models) {

@@ -53,4 +53,16 @@ module.exports = function(app) {
       res.json(dbEmployee);
     });
   });
+
+  app.get("/api/sample_data",(req, res) => {
+    db.Employee.findAll({
+      include:[
+        {
+          model: db.Department
+        }
+      ]
+    }).then(function(e) {
+      res.json(e);
+    });
+    });
 };
