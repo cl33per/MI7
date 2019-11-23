@@ -8,7 +8,7 @@
             <strong>ID</strong>: {{example.id}}</p>
           <p>
           <p>
-            <strong>Text</strong>: {{example.text}}</p>
+            <strong>Text</strong>: {{example.dep_name}}</p>
           <p>
             <strong>Description:</strong> {{example.description}}</p>
             <a href="/">← Back To Home</a>
@@ -16,4 +16,17 @@
       </div>
     </div>
   </div>
+
+      <div class="row">
+      <div class="col-8 offset-2">
+       <ul id="employee-list" class="list-group">
+              {{#each employees}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="employee/{{this.id}}">{{this.first_name}}, {{this.last_name}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}}
+            </ul>
+
+      </div>
 </div>
