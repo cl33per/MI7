@@ -1,7 +1,6 @@
 var db = require("../models");
 var Sequelize = require('sequelize');
 
-module.exports = function(app) {
   // Api deparment list //
 var passport = require("passport");
 
@@ -159,6 +158,3 @@ module.exports = function(app) {
     });
     });
 };
-
-
-}
