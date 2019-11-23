@@ -50,18 +50,32 @@ module.exports = function(app) {
       });
   });
 
-
   // Create a new example
-  // app.post("/api/departments", function(req, res) {
-  //   db.Department.create(req.body).then(function(dbDepartment) {
-  //     res.json(dbDepartment);
-  //   });
-  // });
+  app.post("/api/departments", function(req, res) {
+    db.Department.create(req.body).then(function(dbDepartment) {
+      res.json(dbDepartment);
+    });
+  });
   
   //new employee form post//
   app.post("/api/employee", function(req, res) {
-    db.Employee.create(req.body).then(function(dbEmployee) {
-      res.json(dbEmployee);
+    db.Employee.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      gender: req.body.gender,
+      salary: req.body.salary,
+      birth_date: req.body.birth_date,
+      hire_date: req.body.hire_date,
+      education: req.body.education,
+      email: req.body.email,
+      DepartmentId:req.body.DepartmentId,
+      TitleId: req.body.TitleId,
+      PositionId: req.body.PositionId,
+    
+    }
+    
+    ).then(function(dbEmployee) {
+        res.json(dbEmployee);
     });
   });
 
@@ -71,6 +85,7 @@ module.exports = function(app) {
       res.json(dbDepartment);
     });
   });
+
   //route for list of mentors
   app.delete("/api/employees/:id", function(req, res) {
     db.Employee.destroy({ where: { id: req.params.id } }).then(function(dbEmployee) {
