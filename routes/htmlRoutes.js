@@ -10,7 +10,8 @@ module.exports = function(app) {
 app.get("/", function(req, res) {
       // If the user already has an account send them to the members page
       if (req.user) {
-        res.redirect("/members");
+        // res.redirect("/members");
+        res.redirect("/home");
       }
       res.sendFile(path.join(__dirname, "../public/signup.html"));
     });
@@ -18,7 +19,8 @@ app.get("/", function(req, res) {
     app.get("/login", function(req, res) {
       // If the user already has an account send them to the members page
       if (req.user) {
-        res.redirect("/members");
+        // res.redirect("/members");
+        res.redirect("/home");
       }
       res.sendFile(path.join(__dirname, "../public/login.html"));
     });
@@ -26,13 +28,13 @@ app.get("/", function(req, res) {
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be 
     //redirected to the signup page
-    app.get("/members", isAuthenticated, function(req, res) {
-      res.sendFile(path.join(__dirname, "../public/members.html"));
-    });
+    // app.get("/members", isAuthenticated, function(req, res) {
+    //   res.sendFile(path.join(__dirname, "../public/members.html"));
+    // });
 
 
-  // Load index page
-  app.get("/", function(req, res) {
+  // Load index page(home page)
+  app.get("/home", isAuthenticated, function(req, res) {
     db.Department.findAll({}).then(function(dbDepartment) {
       db.Employee.findAll({}).then(function(dbEmployee) {
         res.render("index", {
