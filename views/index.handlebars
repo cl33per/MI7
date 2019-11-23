@@ -1,15 +1,15 @@
 <div id="home">
   <div class="container">
     <!--Row Number 1-->
-    <div class="row" style="background-color: cyan; margin-top: 30px">
+    <div class="row shadow p-3 mt-5 mb-4 rounded" style="background-color:#00b3b3">
       <div class="col-8 offset-2">
-        <h1 class="text-center">{{msg}}</h1>
-        <h2 class="text-center">Performance Improvement Module</h2>
+        <h1 class="text-center" style="color: blanchedalmond;">{{msg}}</h1>
+        <h2 class="text-center" style="color: blanchedalmond;">Performance Improvement Module</h2>
       </div>
     </div>
  
     <!--Row Number 2-->
-    <div class="row" style="margin-top: 30px">
+    <div class="row mt-5">
         <div class="col-6">
           <div class="card" id="departmenttList">
             <div class="card-header">
@@ -30,14 +30,17 @@
             <div class="card-header">
               Employees
             </div>
-              <ul id="employees-list" class="list-group">
+              {{!-- <ul id="employee-list" class="list-group">
               {{#each employees}}
               <li data-id="{{this.id}}" class="list-group-item">
                 <a href="employee/{{this.id}}">{{this.first_name}}, {{this.last_name}}</a>
                 <button class="btn btn-danger float-right delete">ｘ</button>
               </li>
               {{/each}}
-            </ul>
+            </ul> --}}
+            <div class="embed-responsive embed-responsive-4by3">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Bh-pG27cHtw"></iframe>
+</div>
           </div>
         </div>
     </div>
@@ -135,4 +138,4 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/departmentForm.js"></script>
-<script src="/js/employeeForm.js"></script>
+<script src="/js/dashboardEmpTable.js"></script>
