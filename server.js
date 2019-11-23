@@ -4,9 +4,9 @@ var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 // Requiring passport as we've configured it
-var passport = require("passport");
-var LocalStrategy = require("passport-local").Strategy
-require("./config/passport");
+var passport = require("./config/passport");
+
+// require("./config/passport");
 
 var db = require("./models");
 
@@ -31,6 +31,7 @@ app.set("view engine", "handlebars");
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+// require('./config/')(passport);
 //
 
 // Routes
