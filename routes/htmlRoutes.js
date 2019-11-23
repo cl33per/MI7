@@ -37,10 +37,10 @@ app.get("/", function(req, res) {
   app.get("/home", isAuthenticated, function(req, res) {
     db.Department.findAll({}).then(function(dbDepartment) {
       db.Employee.findAll({}).then(function(dbEmployee) {
-        res.render("index", {
+          res.render("index", {
           msg: "The Mentor",
           departments: dbDepartment,
-          employees: dbEmployee
+          employees: dbEmployee,
         });
       })
     });
@@ -69,6 +69,4 @@ app.get("/", function(req, res) {
   app.get("*", function(req, res) {
     res.render("404");
   });
-
- 
 };

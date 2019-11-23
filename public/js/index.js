@@ -28,7 +28,7 @@ var API = {
       type: "DELETE"
     });
   }
-};
+}; 
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
