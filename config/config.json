@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
+    "username": "ba06e26bbd0a07",
+    "password": "98209d8e",
     "database": "thementor_db",
-    "host": "localhost",
-    "dialect": "mysql"
+    "host": "us-cdbr-iron-east-05.cleardb.net",
+    "dialect": "heroku_f16d1d2b376eca4"
   },
   "test": {
     "username": "root",
     "password": null,
     "database": "testdb",
-    "host": "localhost",
+    "host": "us-cdbr-iron-east-05.cleardb.net",
     "dialect": "mysql",
     "logging": false
   },
