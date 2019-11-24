@@ -3,42 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <!--bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <!--font awesome-->
-   
-<script src="https://kit.fontawesome.com/5f901e4b7a.js" crossorigin="anonymous"></script>
-  <!--jquery-->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <!--Dashboard template CSS-->
+  <script src="https://kit.fontawesome.com/5f901e4b7a.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <link href="styles/sb-admin-2.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
- 
-  <style>{{{style}}}</style>
-  <title>Home Page</title>
+  <title>theMentor || Home Page</title>
 </head>
 
 <body>
-  <!--Bootstrap Base Nav-->
+  <nav class="navbar-light">
   <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="/home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/new_employee">Add Employee</a>
-      </li>
-      <li class="nav-item">
+    <li class="nav-item">
+      <a class="nav-link active" href="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/new_employee">Add Employee</a>
+    </li>
+    {{!-- <li class="nav-item">
         <a class="nav-link" href="*">Add Goals</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="false">Log Out</a>
-      </li>
+      </li> --}}
+    <li class="nav-item">
+      <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="false">Log Out</a>
+    </li>
   </ul>
+  </nav>
 
   {{{body}}}
 </body>
-
 </html>
