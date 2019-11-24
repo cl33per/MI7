@@ -13,11 +13,11 @@ module.exports = function (sequelize, DataTypes) {
                 name: 'users_email',
                 msg: 'A user with this email already exists.',
             },
-            allowNull: false,
-            validate: {
-                notEmpty: true,
-                isEmail: true,
-            },
+            // allowNull: false,
+            // validate: {
+            //     notEmpty: true,
+            //     isEmail: true,
+            // },
         },
         survey_score: DataTypes.INTEGER
     });
