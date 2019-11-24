@@ -1,10 +1,10 @@
 
 {
   "development": {
-    "username": "ba06e26bbd0a07",
-    "password": "98209d8e",
-    "database": "heroku_f16d1d2b376eca4",
-    "host": "us-cdbr-iron-east-05.cleardb.net",
+    "username": "root",
+    "password": "",
+    "database": "thementor_db",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
@@ -16,7 +16,7 @@
     "logging": false
   },
   "production": {
-    "use_env_variable": "DATABASE_URL",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
