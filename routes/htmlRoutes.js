@@ -43,7 +43,7 @@ module.exports = function (app) {
       db.Employee.findAll({
         where: {
           DepartmentID: req.params.id
-        }
+        }, limit: 15, offset: 60
       }).then(function (dbEmployee) {
         res.render("example", {
           example: dbDepartment,
