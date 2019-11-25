@@ -144,4 +144,18 @@ module.exports = function (app) {
     });
   });
 
+ 
+
+    app.get("/api/sample_data1",(req, res) => {
+      db.Employee.findAll({
+        include:[
+          {
+            model: db.Title
+          }
+        ]
+      }).then(function(e) {
+        res.json(e);
+      });
+      });
 };
+
