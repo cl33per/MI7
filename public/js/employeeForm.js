@@ -37,6 +37,13 @@ $(document).ready(function () {
   });
 
   $('#submit').on('click', function (event) {
+    var q1 = $('#q1').val();
+    var q2 = $('#q2').val();
+    var q3 = $('#q3').val();
+    var q4 = $('#q4').val();
+    var q5 = $('#q5').val();
+    var score = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5);
+    
     var newEmployee = {
       first_name: $('#inputFirstName4').val().trim(),
       last_name: $('#inputLastName4').val().trim(),
@@ -51,8 +58,11 @@ $(document).ready(function () {
       TitleId: $('#title').val(),
       PositionId: $('#position').val(),
       active: $('#active').val(),
-      survey_score: $('#score').val()
+      survey_score: score,
     }
+
+   
+
     event.preventDefault();
 
     $.ajax({
