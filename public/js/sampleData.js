@@ -6,6 +6,7 @@ var getData = function () {
         type: "GET"
     });
 };
+
 employees = getData().then(function (data) {
     for (i = 0; i < data.length; i++) {
         empId = data[i].id;
@@ -16,26 +17,28 @@ employees = getData().then(function (data) {
             dict[deptId] = 1
         }
     };
+
     var trace1 = {
         type: 'bar',
         x: Object.keys(dict),
         y: Object.values(dict),
         marker: {
-            color: '#C8A2C8',
+            color: '#4e73df',
             line: {
-                width: 2.5
+                width: .5
             }
         }
     };
+
     var data = [trace1];
     var layout = {
         title: 'Employees in each Department',
         font: {
-            size: 18
+            size: 14
         },
         family: 'Comic Sans Serif',
         xaxis: {
-            title: 'Departments',
+            title: ' ',
             color: 'blue'
         },
         yaxis: {
@@ -68,8 +71,8 @@ employees = getData().then(function (data) {
             type: 'pie'
         }];
         var layout = {
-            height: 600,
-            width: 700
+            height: 500,
+            width: 500
         };
         Plotly.newPlot('myDiv2', data, layout, {
             responsive: true
