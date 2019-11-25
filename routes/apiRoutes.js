@@ -157,4 +157,16 @@ module.exports = function(app) {
       res.json(e);
     });
     });
+
+    app.get("/api/sample_data1",(req, res) => {
+      db.Employee.findAll({
+        include:[
+          {
+            model: db.Title
+          }
+        ]
+      }).then(function(e) {
+        res.json(e);
+      });
+      });
 };
