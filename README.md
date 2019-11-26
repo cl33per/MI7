@@ -12,7 +12,7 @@ The purpose of “The Mentor” is to create and evolve company culture by utili
 
 The Mentor will assist leadership and other director level employees by creating data visualization tools i.e. overhead, CTC, Hours on projects, Departments courses hours, Department Ratings. The Mentor will allow users in leadership roles to assign courses, continued education, and other various recommendations to their teams. 
 
-See the working app here:
+See the working app here:  https://the-mentor.herokuapp.com/
 
 ### Additional Creators
 - [Aaron McKoy](https://github.com/ArMc8234)

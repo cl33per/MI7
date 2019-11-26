@@ -37,11 +37,14 @@ $(document).ready(function () {
   });
 
   $('#submit').on('click', function (event) {
+    event.preventDefault();
+
     var q1 = $('#q1').val();
     var q2 = $('#q2').val();
     var q3 = $('#q3').val();
     var q4 = $('#q4').val();
     var q5 = $('#q5').val();
+    
     var score = parseInt(q1) + parseInt(q2) + parseInt(q3) + parseInt(q4) + parseInt(q5);
     
     var newEmployee = {
@@ -60,10 +63,7 @@ $(document).ready(function () {
       active: $('#active').val(),
       survey_score: score,
     }
-
-   
-
-    event.preventDefault();
+    
 
     $.ajax({
       method: "POST",
