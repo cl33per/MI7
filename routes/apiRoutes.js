@@ -120,7 +120,6 @@ module.exports = function (app) {
       TitleId: req.body.TitleId,
       PositionId: req.body.PositionId,
       survey_score: req.body.survey_score
-
     }).then(function (dbEmployee) {
       res.json(dbEmployee);
     });
