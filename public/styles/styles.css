@@ -16,3 +16,9 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+.q-space{
+  padding-top: .5rem;
+}
+.s-space{
+  padding-bottom: .5rem;
+}

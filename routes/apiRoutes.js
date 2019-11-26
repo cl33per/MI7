@@ -119,6 +119,8 @@ module.exports = function (app) {
       DepartmentId: req.body.DepartmentId,
       TitleId: req.body.TitleId,
       PositionId: req.body.PositionId,
+      survey_score: req.body.survey_score
+
     }).then(function (dbEmployee) {
       res.json(dbEmployee);
     });
@@ -143,8 +145,6 @@ module.exports = function (app) {
       res.json(dbEmployee);
     });
   });
-
- 
 
     app.get("/api/sample_data1",(req, res) => {
       db.Employee.findAll({
