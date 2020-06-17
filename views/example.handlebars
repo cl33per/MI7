@@ -17,10 +17,35 @@
     <div class="col-8 offset-2">
       <ul id="employee-list" class="list-group">
         {{#each employees}}
+         {{!--  {{if @last}}
+        <li data-id="{{this.id}}" class="list-group-item last-record">
+          <a href="employee/{{this.id}}">{{this.first_name}}, {{this.last_name}}</a>
+        </li>
+        {{else}} --}}
         <li data-id="{{this.id}}" class="list-group-item">
           <a href="employee/{{this.id}}">{{this.first_name}}, {{this.last_name}}</a>
         </li>
         {{/each}}
       </ul>
     </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <nav class="col-8 offset-2" aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="/department/{{example.id}}/employee_previous.html">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="/department/{{example.id}}/employee_result1.html"
+      {{!-- "/deparmtents/",req.params.id,"/",{{lastID}}"" --}}
+      >1</a></li>
+    <li class="page-item"><a class="page-link" href="/department/{{example.id}}/employee_result2.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="/department/{{example.id}}/employee_result3.html">3</a></li>
+    <li class="page-item"><a class="page-link" href="/department/{{example.id}}/employee_next_result.html">Next</a></li>
+  </ul>
+</nav>
+<script>
+ 
+ 
+
+</script>
   </div>
